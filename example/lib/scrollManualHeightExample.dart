@@ -14,10 +14,8 @@ class ScrollManualHeightExample extends StatefulWidget {
 class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
   final ScrollController _scrollController = ScrollController();
 
-  List listku = [];
   @override
   void initState() {
-    listku.addAll(List.generate(100, (index) => '$index'));
     super.initState();
   }
 
@@ -101,10 +99,10 @@ class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
                     initialList: [
                       CoachModel(
                         initial: '1',
-                        title: 'Burung kakak tua',
+                        title: 'Highlight red box',
                         maxWidth: 400,
                         subtitle: [
-                          'Burung kakak tua\nHinggap di jendela\nNenek sudah tua\nGiginya tinggal dua',
+                          'Red box text',
                         ],
                         header: Image.asset(
                           'images/logo.png',
@@ -117,7 +115,7 @@ class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
                       ),
                       CoachModel(
                           initial: '2',
-                          title: 'Belajar Berhitung',
+                          title: 'Green box highlight title',
                           maxWidth: 400,
                           subtitle: [
                             '1',
@@ -136,10 +134,10 @@ class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
                           )),
                       CoachModel(
                           initial: '3',
-                          title: 'Nomer 60',
+                          title: 'Blue box title',
                           maxWidth: 400,
                           subtitle: [
-                            'Tuh kan loncat',
+                            'Random text',
                           ],
                           scrollOptions: ScrollOptions(
                               scrollController: _scrollController,
@@ -151,10 +149,10 @@ class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
                           )),
                       CoachModel(
                           initial: 'floatBtn',
-                          title: 'Huftt lelah juga',
+                          title: 'Initiation Button Title',
                           maxWidth: 400,
                           subtitle: [
-                            'Dahlah ya',
+                            'This button initiates the coach screen',
                           ],
                           header: Image.asset(
                             'images/logo.png',
@@ -165,8 +163,8 @@ class _ScrollManualHeightExampleState extends State<ScrollManualHeightExample> {
                     skip: () {},
                     nextStep: CoachMakerControl.next,
                     buttonOptions: CoachButtonOptions(
-                        skipTitle: 'Lewati',
-                        buttonTitle: 'Lanjut',
+                        skipTitle: 'Skip',
+                        buttonTitle: 'Next',
                         buttonStyle: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.green),

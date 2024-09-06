@@ -13,10 +13,10 @@ class ScrollExample extends StatefulWidget {
 class _ScrollExampleState extends State<ScrollExample> {
   final ScrollController _scrollController = ScrollController();
 
-  List listku = [];
+  List numberList = [];
   @override
   void initState() {
-    listku.addAll(List.generate(100, (index) => '$index'));
+    numberList.addAll(List.generate(100, (index) => '$index'));
     super.initState();
   }
 
@@ -39,7 +39,7 @@ class _ScrollExampleState extends State<ScrollExample> {
           physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             return CoachPoint(
-              initial: listku[index],
+              initial: numberList[index],
               child: ListTile(
                 title: Text('$index'),
               ),
@@ -54,10 +54,10 @@ class _ScrollExampleState extends State<ScrollExample> {
                     initialList: [
                       CoachModel(
                         initial: '1',
-                        title: 'Burung kakak tua',
+                        title: 'Number 1',
                         maxWidth: 400,
                         subtitle: [
-                          'Burung kakak tua\nHinggap di jendela\nNenek sudah tua\nGiginya tinggal dua',
+                          'Number 1\nRandom text\nOther, more random text\nlast line of text',
                         ],
                         header: Image.asset(
                           'images/logo.png',
@@ -70,7 +70,7 @@ class _ScrollExampleState extends State<ScrollExample> {
                       ),
                       CoachModel(
                           initial: '50',
-                          title: 'Belajar Berhitung',
+                          title: 'Halfway through, number 50',
                           maxWidth: 400,
                           subtitle: [
                             '1',
@@ -90,10 +90,10 @@ class _ScrollExampleState extends State<ScrollExample> {
                           )),
                       CoachModel(
                           initial: '60',
-                          title: 'Nomer 60',
+                          title: 'Number 60',
                           maxWidth: 400,
                           subtitle: [
-                            'Tuh kan loncat',
+                            '60th list tile',
                           ],
                           scrollOptions: ScrollOptions(
                               scrollController: _scrollController,
@@ -105,10 +105,10 @@ class _ScrollExampleState extends State<ScrollExample> {
                           )),
                       CoachModel(
                           initial: 'floatBtn',
-                          title: 'Huftt lelah juga',
+                          title: 'Floating Action Button',
                           maxWidth: 400,
                           subtitle: [
-                            'Dahlah ya',
+                            'Initiating button',
                           ],
                           header: Image.asset(
                             'images/logo.png',
@@ -120,8 +120,8 @@ class _ScrollExampleState extends State<ScrollExample> {
                     duration: Duration(milliseconds: 600),
                     nextStep: CoachMakerControl.next,
                     buttonOptions: CoachButtonOptions(
-                        skipTitle: 'Lewati',
-                        buttonTitle: 'Lanjut',
+                        skipTitle: 'Skip',
+                        buttonTitle: 'Next',
                         buttonStyle: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.green),

@@ -16,12 +16,7 @@ class _HorizontalExampleState extends State<HorizontalExample> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: CoachPoint(
-            initial: 'iconBtn1',
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.menu))),
-        title: CoachPoint(
-            initial: 'appBar',
-            child: Text('Horizontal....................................')),
+        title: CoachPoint(initial: 'appBar', child: Text('Horizontal Example')),
         actions: [
           CoachPoint(
               initial: 'iconBtn2',
@@ -40,7 +35,7 @@ class _HorizontalExampleState extends State<HorizontalExample> {
                 width: 100,
                 child: Center(
                   child: Text(
-                    'Sorot aku kakak',
+                    'Left side box',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),
@@ -55,7 +50,7 @@ class _HorizontalExampleState extends State<HorizontalExample> {
                 width: 100,
                 child: Center(
                   child: Text(
-                    'Sorot aku kakak',
+                    'Middle box',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),
@@ -70,7 +65,7 @@ class _HorizontalExampleState extends State<HorizontalExample> {
                 width: 100,
                 child: Center(
                   child: Text(
-                    'Sorot aku kakak',
+                    'Right side box text',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white),
                   ),
@@ -85,141 +80,133 @@ class _HorizontalExampleState extends State<HorizontalExample> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CoachPoint(
-              initial: 'floatBtn1',
-              child: FloatingActionButton(onPressed: () {})),
+            initial: 'floatBtn1',
+            child: FloatingActionButton(
+              onPressed: () {},
+              heroTag: 'floatBtn1-heroTag',
+            ),
+          ),
           CoachPoint(
-              initial: 'floatBtn2',
-              child: FloatingActionButton(onPressed: () {})),
+            initial: 'floatBtn2',
+            child: FloatingActionButton(
+              onPressed: () {},
+              heroTag: 'floatBtn2-heroTag',
+            ),
+          ),
           CoachPoint(
             initial: 'floatBtn3',
             child: FloatingActionButton(
               onPressed: () {
-                CoachMaker(context,
-                        initialList: [
-                          CoachModel(
-                            initial: '1',
-                            title: 'Indonesia',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Banyak dah pokoknyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!',
-                            ],
-                            header: Image.asset(
-                              'images/logo.png',
-                              height: 50,
-                              width: 50,
-                            ),
-                          ),
-                          CoachModel(
-                            initial: '2',
-                            title: 'Burung Bangau yang Angkuh',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Seekor bangau berjalan dengan langkah yang anggun di sepanjang sebuah sungai kecil, matanya menatap air sungai yang jernih, leher dan paruhnya yang panjang siap untuk menangkap mangsa di air sebagai sarapan paginya. Saat itu, sungai dipenuhi dengan ikan-ikan yang berenang, tetapi sang Bangau merasa sedikit angkuh di pagi hari itu.',
-                              'bagian 2'
-                            ],
-                          ),
-                          CoachModel(
-                            initial: '3',
-                            title: 'Indonesia',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Banyak dah pokoknyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!',
-                            ],
-                            header: Image.asset(
-                              'images/logo.png',
-                              height: 50,
-                              width: 50,
-                            ),
-                          ),
-                          CoachModel(
-                            initial: 'appBar',
-                            title: 'Indonesia',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Banyak dah pokoknyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!',
-                            ],
-                            header: Image.asset(
-                              'images/logo.png',
-                              height: 50,
-                              width: 50,
-                            ),
-                          ),
-                          CoachModel(
-                            initial: 'iconBtn1',
-                            title: 'Indonesia',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Banyak dah pokoknyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!',
-                            ],
-                            header: Image.asset(
-                              'images/logo.png',
-                              height: 50,
-                              width: 50,
-                            ),
-                          ),
-                          CoachModel(
-                            initial: 'iconBtn2',
-                            title: 'Indonesia',
-                            maxWidth: 400,
-                            subtitle: [
-                              'Banyak dah pokoknyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!',
-                            ],
-                            header: Image.asset(
-                              'images/logo.png',
-                              height: 50,
-                              width: 50,
-                            ),
-                          ),
-                          CoachModel(
-                              initial: 'floatBtn1',
-                              title: 'Burung Bangau yang Angkuh',
-                              maxWidth: 400,
-                              subtitle: [
-                                'Seekor bangau berjalan dengan langkah yang anggun di sepanjang sebuah sungai kecil, matanya menatap air sungai yang jernih, leher dan paruhnya yang panjang siap untuk menangkap mangsa di air sebagai sarapan paginya. Saat itu, sungai dipenuhi dengan ikan-ikan yang berenang, tetapi sang Bangau merasa sedikit angkuh di pagi hari itu.',
-                                'bagian 2'
-                              ],
-                              header: Image.asset(
-                                'images/logo.png',
-                                height: 50,
-                                width: 50,
-                              )),
-                          CoachModel(
-                              initial: 'floatBtn2',
-                              title: 'Burung Bangau yang Angkuh',
-                              maxWidth: 400,
-                              subtitle: [
-                                'Seekor bangau berjalan dengan langkah yang anggun di sepanjang sebuah sungai kecil, matanya menatap air sungai yang jernih, leher dan paruhnya yang panjang siap untuk menangkap mangsa di air sebagai sarapan paginya. Saat itu, sungai dipenuhi dengan ikan-ikan yang berenang, tetapi sang Bangau merasa sedikit angkuh di pagi hari itu.',
-                                'bagian 2'
-                              ],
-                              header: Image.asset(
-                                'images/logo.png',
-                                height: 50,
-                                width: 50,
-                              )),
-                          CoachModel(
-                              initial: 'floatBtn3',
-                              title: 'Burung Bangau yang Angkuh',
-                              maxWidth: 400,
-                              subtitle: [
-                                'Seekor bangau berjalan dengan langkah yang anggun di sepanjang sebuah sungai kecil, matanya menatap air sungai yang jernih, leher dan paruhnya yang panjang siap untuk menangkap mangsa di air sebagai sarapan paginya. Saat itu, sungai dipenuhi dengan ikan-ikan yang berenang, tetapi sang Bangau merasa sedikit angkuh di pagi hari itu.',
-                                'bagian 2'
-                              ],
-                              header: Image.asset(
-                                'images/logo.png',
-                                height: 50,
-                                width: 50,
-                              )),
+                CoachMaker(
+                  context,
+                  initialList: [
+                    CoachModel(
+                      initial: '1',
+                      title: 'First title',
+                      maxWidth: 400,
+                      subtitle: [
+                        'Left side box subtitle',
+                      ],
+                      header: Image.asset(
+                        'images/logo.png',
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+                    CoachModel(
+                      initial: '2',
+                      title: 'Middle Box',
+                      maxWidth: 400,
+                      subtitle: ['Middle box subtitle text', 'Subtitle page 2'],
+                    ),
+                    CoachModel(
+                      initial: '3',
+                      title: 'Right Side Title',
+                      maxWidth: 400,
+                      subtitle: [
+                        'Gibberish, gibberish, etc, etc, ...',
+                      ],
+                      header: Image.asset(
+                        'images/logo.png',
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+                    CoachModel(
+                      initial: 'appBar',
+                      title: 'AppBar Scaffold Title',
+                      maxWidth: 400,
+                      subtitle: [
+                        'subtitle here',
+                      ],
+                      header: Image.asset(
+                        'images/logo.png',
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+                    CoachModel(
+                      initial: 'iconBtn2',
+                      title: 'Menu Icon Button',
+                      maxWidth: 400,
+                      subtitle: [
+                        'subtitle',
+                      ],
+                      header: Image.asset(
+                        'images/logo.png',
+                        height: 50,
+                        width: 50,
+                      ),
+                    ),
+                    CoachModel(
+                        initial: 'floatBtn1',
+                        title: 'Left Floating Action Button',
+                        maxWidth: 400,
+                        subtitle: [
+                          'No icon in this floating action button',
+                          'empty button'
                         ],
-                        skip: () {},
-                        nextStep: CoachMakerControl.next,
-                        buttonOptions: CoachButtonOptions(
-                            skipTitle: 'Lewati',
-                            buttonTitle: 'Lanjut',
-                            buttonStyle: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.green),
-                                elevation: MaterialStateProperty.all(0))))
-                    .show();
+                        header: Image.asset(
+                          'images/logo.png',
+                          height: 50,
+                          width: 50,
+                        )),
+                    CoachModel(
+                        initial: 'floatBtn2',
+                        title: 'Middle Floating Action Button',
+                        maxWidth: 400,
+                        subtitle: [
+                          'No icon in this floating action button',
+                          'empty button',
+                          '-------- empty --------'
+                        ],
+                        header: Image.asset(
+                          'images/logo.png',
+                          height: 50,
+                          width: 50,
+                        )),
+                    CoachModel(
+                        initial: 'floatBtn3',
+                        title: 'Plus Button',
+                        maxWidth: 400,
+                        subtitle: ['Initiator'],
+                        header: Image.asset(
+                          'images/logo.png',
+                          height: 50,
+                          width: 50,
+                        )),
+                  ],
+                  skip: () {},
+                  nextStep: CoachMakerControl.next,
+                  buttonOptions: CoachButtonOptions(
+                    skipTitle: 'Skip',
+                    buttonTitle: 'Next',
+                    buttonStyle: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.green),
+                        elevation: MaterialStateProperty.all(0)),
+                  ),
+                ).show();
               },
               tooltip: 'Increment',
               child: Icon(Icons.add),
