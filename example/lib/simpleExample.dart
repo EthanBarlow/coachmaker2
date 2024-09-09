@@ -176,10 +176,10 @@ class _SimpleState extends State<Simple> {
               buttonOptions: CoachButtonOptions(
                 skipTitle: 'Skip',
                 buttonTitle: 'Next',
-                buttonStyle: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.green),
-                  elevation: MaterialStateProperty.all(0),
-                ),
+                // buttonStyle: ButtonStyle(
+                //   backgroundColor: MaterialStateProperty.all(Colors.green),
+                //   elevation: MaterialStateProperty.all(0),
+                // ),
               ),
             ).show();
           },

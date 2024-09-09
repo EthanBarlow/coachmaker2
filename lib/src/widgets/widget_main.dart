@@ -128,8 +128,11 @@ class _WidgetMainState extends State<WidgetMain> {
       fit: StackFit.expand,
       children: [
         ColorFiltered(
-          colorFilter:
-              ColorFilter.mode(Colors.black.withOpacity(0.8), BlendMode.srcOut),
+          colorFilter: ColorFilter.mode(
+              Theme.of(context).brightness == Brightness.dark
+                  ? Colors.grey.shade800.withOpacity(0.8)
+                  : Colors.black.withOpacity(0.8),
+              BlendMode.srcOut),
           child: Stack(
             fit: StackFit.expand,
             children: [

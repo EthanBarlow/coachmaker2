@@ -317,7 +317,7 @@ class _WidgetCardState extends State<WidgetCard> {
                       : widget.model.maxWidth,
                   key: GlobalObjectKey('pointWidget1234567890'),
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(10)),
                   child: Padding(
                     padding: const EdgeInsets.all(10),
@@ -340,7 +340,10 @@ class _WidgetCardState extends State<WidgetCard> {
                                 style: widget.model.titleTextStyle ??
                                     TextStyle(
                                       fontSize: 15,
-                                      color: Colors.black87,
+                                      color: Theme.of(context)
+                                          .textTheme
+                                          .headlineSmall
+                                          ?.color,
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
@@ -352,7 +355,11 @@ class _WidgetCardState extends State<WidgetCard> {
                                       style: widget.model.subtitleTextStyle ??
                                           TextStyle(
                                             fontSize: 12,
-                                            color: Colors.grey,
+                                            color: Theme.of(context)
+                                                    .textTheme
+                                                    .titleMedium
+                                                    ?.color ??
+                                                Colors.grey,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     )
@@ -403,10 +410,30 @@ class _WidgetCardState extends State<WidgetCard> {
                                                       height: 5,
                                                       width: 5,
                                                       decoration: BoxDecoration(
-                                                          color: index ==
-                                                                  currentPage
-                                                              ? Colors.black87
-                                                              : Colors.grey,
+                                                          color: Theme.of(context)
+                                                                      .brightness ==
+                                                                  Brightness
+                                                                      .light
+                                                              ? index ==
+                                                                      currentPage
+                                                                  ? Theme.of(
+                                                                          context)
+                                                                      .primaryColorDark
+                                                                  : Theme.of(
+                                                                          context)
+                                                                      .primaryColorDark
+                                                                      .withOpacity(
+                                                                          0.5)
+                                                              : index ==
+                                                                      currentPage
+                                                                  ? Theme.of(
+                                                                          context)
+                                                                      .primaryColorLight
+                                                                  : Theme.of(
+                                                                          context)
+                                                                      .primaryColorLight
+                                                                      .withOpacity(
+                                                                          0.5),
                                                           shape:
                                                               BoxShape.circle),
                                                     ),
